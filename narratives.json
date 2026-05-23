@@ -1,0 +1,202 @@
+[
+  {
+    "incident_id": "INC001",
+    "narrative": "Incident INC001 is a Nostro Reconciliation issue from GLRS. Nostro balance mismatch USD 2.4M, GLRS feed not received by EOD. Root cause: SWIFT cut-off time difference caused feed delay. Resolution: Manual adjustment posted, feed team notified, resolved next morning. Amount impacted: 2400000. Status: closed."
+  },
+  {
+    "incident_id": "INC002",
+    "narrative": "Incident INC002 is a Position Break issue from MUREX. MUREX position break vs settlement system, 500 trades unmatched. Root cause: Late trade booking missed settlement cut-off. Resolution: Backdated entries raised, ops team confirmed match. Amount impacted: 500000. Status: closed."
+  },
+  {
+    "incident_id": "INC003",
+    "narrative": "Incident INC003 is a Cash Break issue from CALYPSO. CALYPSO cash break USD 1.2M wrong value date posted. Root cause: Holiday calendar not updated in system. Resolution: Value date corrected and reposted by static data team. Amount impacted: 1200000. Status: closed."
+  },
+  {
+    "incident_id": "INC004",
+    "narrative": "Incident INC004 is a Nostro Reconciliation issue from SWIFT. SWIFT feed delayed 4 hours, nostro opening balance incorrect. Root cause: SWIFT network maintenance window overran. Resolution: Feed reprocessed manually, balance corrected. Amount impacted: 3100000. Status: closed."
+  },
+  {
+    "incident_id": "INC005",
+    "narrative": "Incident INC005 is a Position Break issue from SUMMIT. SUMMIT bond position mismatch vs custodian, 3 trades missing. Root cause: Custodian file arrived in wrong format, rejected by parser. Resolution: Format issue fixed, file reloaded, positions matched. Amount impacted: 750000. Status: closed."
+  },
+  {
+    "incident_id": "INC006",
+    "narrative": "Incident INC006 is a Enrichment Failure issue from MUREX. Enrichment failure on 200 FX trades, missing SSI data. Root cause: Counterparty SSI not updated after account change. Resolution: SSI updated in static data, trades re-enriched and released. Amount impacted: 1800000. Status: closed."
+  },
+  {
+    "incident_id": "INC007",
+    "narrative": "Incident INC007 is a Nostro Reconciliation issue from GLRS. USD nostro account showing USD 5M surplus vs bank statement. Root cause: Duplicate posting from overnight batch job. Resolution: Duplicate entry reversed, root cause fixed in batch config. Amount impacted: 5000000. Status: closed."
+  },
+  {
+    "incident_id": "INC008",
+    "narrative": "Incident INC008 is a Cash Break issue from CALYPSO. CALYPSO interest payment break, 45 accounts affected. Root cause: Rate reset not applied due to system timeout. Resolution: Batch rerun after timeout resolved, payments posted correctly. Amount impacted: 920000. Status: closed."
+  },
+  {
+    "incident_id": "INC009",
+    "narrative": "Incident INC009 is a Position Break issue from KONDOR. KONDOR FX position flat but P&L showing USD 300K loss. Root cause: Incorrect FX rate applied at revaluation. Resolution: Rate corrected manually, P&L recalculated and reconciled. Amount impacted: 300000. Status: closed."
+  },
+  {
+    "incident_id": "INC010",
+    "narrative": "Incident INC010 is a Nostro Reconciliation issue from SWIFT. SWIFT MT202 messages not received, correspondent bank unmatched. Root cause: Firewall rule blocked incoming SWIFT messages for 2 hours. Resolution: Firewall rule corrected, messages reprocessed, accounts balanced. Amount impacted: 4200000. Status: closed."
+  },
+  {
+    "incident_id": "INC011",
+    "narrative": "Incident INC011 is a Feed Failure issue from MUREX. MUREX trade feed to settlement system stopped at 3pm. Root cause: Database connection pool exhausted during peak load. Resolution: Connection pool size increased, feed restarted, trades replayed. Amount impacted: 2100000. Status: closed."
+  },
+  {
+    "incident_id": "INC012",
+    "narrative": "Incident INC012 is a Enrichment Failure issue from BLOOMBERG. Bloomberg pricing feed delayed, 1200 bonds using stale prices. Root cause: Bloomberg API rate limit hit during batch pricing run. Resolution: Pricing job rerun after rate limit reset, all bonds repriced. Amount impacted: 8500000. Status: closed."
+  },
+  {
+    "incident_id": "INC013",
+    "narrative": "Incident INC013 is a Cash Break issue from OPTIMA. OPTIMA repo break USD 3.4M, collateral not returned on time. Root cause: Maturity date incorrect in trade capture. Resolution: Trade amended, collateral returned, counterparty notified. Amount impacted: 3400000. Status: closed."
+  },
+  {
+    "incident_id": "INC014",
+    "narrative": "Incident INC014 is a Nostro Reconciliation issue from GLRS. GLRS nostro GBP account break, weekend accruals missing. Root cause: Accrual job skipped Saturday due to incorrect calendar config. Resolution: Accruals posted manually for both days, calendar config fixed. Amount impacted: 670000. Status: closed."
+  },
+  {
+    "incident_id": "INC015",
+    "narrative": "Incident INC015 is a Position Break issue from SUMMIT. SUMMIT equity position break, corporate action not applied. Root cause: Stock split event missed in corporate actions feed. Resolution: Corporate action applied manually, position adjusted, custodian confirmed. Amount impacted: 1100000. Status: closed."
+  },
+  {
+    "incident_id": "INC016",
+    "narrative": "Incident INC016 is a Enrichment Failure issue from CALYPSO. CALYPSO failing to enrich 80 trades, missing legal entity data. Root cause: Legal entity merger not updated in reference data. Resolution: Reference data updated, trades re-enriched automatically. Amount impacted: 2900000. Status: closed."
+  },
+  {
+    "incident_id": "INC017",
+    "narrative": "Incident INC017 is a Cash Break issue from MUREX. MUREX USD cash break USD 1.7M open since Monday. Root cause: Funding instruction sent to wrong nostro account. Resolution: Funds transferred to correct account, instruction template corrected. Amount impacted: 1700000. Status: closed."
+  },
+  {
+    "incident_id": "INC018",
+    "narrative": "Incident INC018 is a Feed Failure issue from GLRS. SWIFT feed received but GLRS rejected all messages, 0 posted. Root cause: GLRS schema version mismatch after weekend release. Resolution: Schema updated in GLRS config, messages reprocessed successfully. Amount impacted: 3800000. Status: closed."
+  },
+  {
+    "incident_id": "INC019",
+    "narrative": "Incident INC019 is a Position Break issue from KONDOR. KONDOR FX forward book position break vs confirmation system. Root cause: Confirmation system applied wrong settlement date convention. Resolution: Settlement dates corrected in confirmation system, positions matched. Amount impacted: 440000. Status: closed."
+  },
+  {
+    "incident_id": "INC020",
+    "narrative": "Incident INC020 is a Nostro Reconciliation issue from GLRS. Nostro JPY account USD equivalent break due to FX rate. Root cause: Overnight FX revaluation used previous day rate. Resolution: Revaluation rerun with correct rate, JPY break resolved. Amount impacted: 2200000. Status: closed."
+  },
+  {
+    "incident_id": "INC021",
+    "narrative": "Incident INC021 is a Feed Failure issue from MUREX. MUREX equity trade feed stopped, 3 hours of trades missing. Root cause: Disk space exhausted on MUREX app server. Resolution: Disk space freed, feed restarted, missing trades replayed from audit log. Amount impacted: 5600000. Status: closed."
+  },
+  {
+    "incident_id": "INC022",
+    "narrative": "Incident INC022 is a Cash Break issue from CALYPSO. CALYPSO money market break, rollover not processed. Root cause: Automatic rollover job failed due to missing rate. Resolution: Rate input manually, rollover processed, counterparty confirmed. Amount impacted: 9000000. Status: closed."
+  },
+  {
+    "incident_id": "INC023",
+    "narrative": "Incident INC023 is a Nostro Reconciliation issue from SWIFT. SWIFT nostro statement arrived 6 hours late, reconciliation delayed. Root cause: Correspondent bank changed statement delivery time without notice. Resolution: Reconciliation completed on delayed basis, correspondent bank notified. Amount impacted: 1500000. Status: closed."
+  },
+  {
+    "incident_id": "INC024",
+    "narrative": "Incident INC024 is a Position Break issue from SUMMIT. SUMMIT custodian break, 15 trades showing at custodian not in SUMMIT. Root cause: Batch job dropped trades with non-standard settlement codes. Resolution: Settlement code mapping updated, missing trades loaded. Amount impacted: 870000. Status: closed."
+  },
+  {
+    "incident_id": "INC025",
+    "narrative": "Incident INC025 is a Cash Break issue from OPTIMA. OPTIMA collateral break, haircut calculated incorrectly. Root cause: Wrong haircut table applied after regulatory update. Resolution: Correct haircut table loaded, margin calls recalculated. Amount impacted: 2300000. Status: closed."
+  },
+  {
+    "incident_id": "INC026",
+    "narrative": "Incident INC026 is a Feed Failure issue from GLRS. GLRS feed received but amounts in wrong currency. Root cause: Currency field mapping changed in upstream system without notification. Resolution: Mapping corrected in GLRS parser, feed reprocessed. Amount impacted: 1900000. Status: closed."
+  },
+  {
+    "incident_id": "INC027",
+    "narrative": "Incident INC027 is a Cash Break issue from MUREX. MUREX bond accrual break, 500 positions showing zero accrual. Root cause: Accrual basis flag set incorrectly after migration. Resolution: Flag corrected on all affected positions, accruals recalculated. Amount impacted: 3300000. Status: closed."
+  },
+  {
+    "incident_id": "INC028",
+    "narrative": "Incident INC028 is a Enrichment Failure issue from BLOOMBERG. Bloomberg FX rate feed missing for 12 currency pairs. Root cause: Bloomberg subscription lapsed for emerging market data package. Resolution: Subscription renewed, missing rates loaded manually for the day. Amount impacted: 7100000. Status: closed."
+  },
+  {
+    "incident_id": "INC029",
+    "narrative": "Incident INC029 is a Nostro Reconciliation issue from KONDOR. KONDOR nostro break EUR 4.1M, unposted settlement instruction. Root cause: Settlement instruction generated but not released due to approval timeout. Resolution: Instruction approved and released, funds settled same day. Amount impacted: 4100000. Status: closed."
+  },
+  {
+    "incident_id": "INC030",
+    "narrative": "Incident INC030 is a Cash Break issue from CALYPSO. CALYPSO equity dividend break, 200 accounts short credited. Root cause: Dividend rate loaded net instead of gross, tax calculated twice. Resolution: Gross rate reloaded, shortfall credited to all affected accounts. Amount impacted: 1600000. Status: closed."
+  },
+  {
+    "incident_id": "INC031",
+    "narrative": "Incident INC031 is a Feed Failure issue from MUREX. MUREX feed to risk system delayed 2 hours, VaR calculation stale. Root cause: Network timeout between MUREX and risk system. Resolution: Network route fixed, feed replayed, VaR recalculated on time. Amount impacted: 0. Status: closed."
+  },
+  {
+    "incident_id": "INC032",
+    "narrative": "Incident INC032 is a Nostro Reconciliation issue from SWIFT. SWIFT message rejected by correspondent, nostro unmatched. Root cause: BIC code in payment instruction outdated after bank merger. Resolution: BIC updated in standing settlement instructions, payment resent. Amount impacted: 2700000. Status: closed."
+  },
+  {
+    "incident_id": "INC033",
+    "narrative": "Incident INC033 is a Position Break issue from OPTIMA. OPTIMA repo collateral substitution not reflected in positions. Root cause: Substitution event not processed by overnight batch. Resolution: Substitution applied manually, counterparty confirmed new collateral. Amount impacted: 1300000. Status: closed."
+  },
+  {
+    "incident_id": "INC034",
+    "narrative": "Incident INC034 is a Nostro Reconciliation issue from GLRS. GLRS multi-currency account break, netting applied incorrectly. Root cause: Netting configuration changed without updating GLRS rules. Resolution: GLRS netting rules updated, break reversed, account balanced. Amount impacted: 3700000. Status: closed."
+  },
+  {
+    "incident_id": "INC035",
+    "narrative": "Incident INC035 is a Position Break issue from SUMMIT. SUMMIT prime brokerage break, client position overstated. Root cause: Client trade cancel not propagated to prime brokerage module. Resolution: Cancel applied in prime brokerage, position corrected, client notified. Amount impacted: 620000. Status: closed."
+  },
+  {
+    "incident_id": "INC036",
+    "narrative": "Incident INC036 is a Cash Break issue from CALYPSO. CALYPSO IR swap break, floating rate reset not applied. Root cause: LIBOR to SOFR migration setting incorrect for legacy swaps. Resolution: Rate setting corrected, reset applied, payment recalculated. Amount impacted: 4800000. Status: closed."
+  },
+  {
+    "incident_id": "INC037",
+    "narrative": "Incident INC037 is a Position Break issue from MUREX. MUREX FX options position break after system upgrade. Root cause: Upgrade changed delta calculation methodology without config update. Resolution: Config restored to pre-upgrade setting, positions recalculated. Amount impacted: 2500000. Status: closed."
+  },
+  {
+    "incident_id": "INC038",
+    "narrative": "Incident INC038 is a Enrichment Failure issue from BLOOMBERG. BLOOMBERG bond reference data missing for 300 new ISINs. Root cause: New ISINs not yet loaded in Bloomberg, trades held in enrichment queue. Resolution: ISINs loaded manually from prospectus data, trades released. Amount impacted: 6200000. Status: closed."
+  },
+  {
+    "incident_id": "INC039",
+    "narrative": "Incident INC039 is a Nostro Reconciliation issue from KONDOR. KONDOR nostro break caused by timing difference in CLS settlement. Root cause: CLS settlement reported one day ahead of value date in KONDOR. Resolution: Timing adjustment applied in KONDOR config, break will not recur. Amount impacted: 1100000. Status: closed."
+  },
+  {
+    "incident_id": "INC040",
+    "narrative": "Incident INC040 is a Cash Break issue from OPTIMA. OPTIMA margin call not generated for 3 counterparties. Root cause: Threshold breach below minimum transfer amount setting. Resolution: MTM setting corrected, margin calls generated and sent. Amount impacted: 890000. Status: closed."
+  },
+  {
+    "incident_id": "INC041",
+    "narrative": "Incident INC041 is a Nostro Reconciliation issue from GLRS. GLRS nostro USD break USD 8.2M, month end accruals. Root cause: Month end accrual batch ran before all trades booked. Resolution: Batch rerun after trade cut-off, accruals complete. Amount impacted: 8200000. Status: open."
+  },
+  {
+    "incident_id": "INC042",
+    "narrative": "Incident INC042 is a Feed Failure issue from MUREX. MUREX feed failure at quarter end, regulatory report delayed. Root cause: Quarter end batch overran, feed queue backed up. Resolution: Feed priority increased for regulatory feeds, report submitted on time. Amount impacted: 0. Status: closed."
+  },
+  {
+    "incident_id": "INC043",
+    "narrative": "Incident INC043 is a Cash Break issue from CALYPSO. CALYPSO cash break on structured note coupon payment. Root cause: Coupon schedule loaded with wrong frequency. Resolution: Schedule corrected, missed coupons paid, future payments verified. Amount impacted: 2100000. Status: closed."
+  },
+  {
+    "incident_id": "INC044",
+    "narrative": "Incident INC044 is a Position Break issue from SUMMIT. SUMMIT custodian break on newly onboarded fund. Root cause: Fund static data incomplete, trades routed to wrong custodian. Resolution: Static data completed, trades rerouted, custodian confirmed positions. Amount impacted: 3500000. Status: open."
+  },
+  {
+    "incident_id": "INC045",
+    "narrative": "Incident INC045 is a Nostro Reconciliation issue from SWIFT. SWIFT payment rejected, beneficiary account closed. Root cause: Standing instruction not updated after counterparty account change. Resolution: New account details obtained, payment resent, SSI updated. Amount impacted: 1400000. Status: closed."
+  },
+  {
+    "incident_id": "INC046",
+    "narrative": "Incident INC046 is a Position Break issue from KONDOR. KONDOR FX revaluation break, 50 trades using wrong spot rate. Root cause: Spot rate feed from Bloomberg arrived 30 minutes late. Resolution: Revaluation rerun with correct spot rates, P&L updated. Amount impacted: 730000. Status: closed."
+  },
+  {
+    "incident_id": "INC047",
+    "narrative": "Incident INC047 is a Cash Break issue from OPTIMA. OPTIMA collateral eligibility break, ineligible bonds posted. Root cause: Eligibility criteria not updated after counterparty agreement amendment. Resolution: Ineligible collateral substituted, eligible bonds posted, agreement checked. Amount impacted: 5100000. Status: open."
+  },
+  {
+    "incident_id": "INC048",
+    "narrative": "Incident INC048 is a Feed Failure issue from GLRS. GLRS feed received twice, duplicate postings in nostro accounts. Root cause: Upstream system sent feed twice due to retry logic error. Resolution: Duplicate postings reversed, retry logic corrected in upstream. Amount impacted: 4400000. Status: closed."
+  },
+  {
+    "incident_id": "INC049",
+    "narrative": "Incident INC049 is a Enrichment Failure issue from MUREX. MUREX credit limit breach not flagged, trade booked over limit. Root cause: Credit limit table not refreshed after counterparty downgrade. Resolution: Limit table refreshed, breach flagged retrospectively, risk team notified. Amount impacted: 9500000. Status: open."
+  },
+  {
+    "incident_id": "INC050",
+    "narrative": "Incident INC050 is a Nostro Reconciliation issue from CALYPSO. CALYPSO nostro break on FX settlement, both legs posted same side. Root cause: FX settlement template configured with incorrect debit credit indicators. Resolution: Template corrected, incorrect postings reversed, correct entries posted. Amount impacted: 6700000. Status: closed."
+  }
+]

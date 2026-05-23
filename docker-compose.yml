@@ -1,0 +1,9 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: incidents_db
+      POSTGRES_USER: mayuri
+      POSTGRES_PASSWORD: password123
+    ports:
+      - '5432:5432'

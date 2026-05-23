@@ -37,3 +37,4 @@ with open("narratives.json", "w") as f:
  
 print(f"Done! {len(narratives)} narratives saved to narratives.json")
  
+generate_narrative = to_narrative 
